@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title> Projeto Orientado </title>
+    <meta charset="UTF-8">
+    <link href="css/main.css" rel="stylesheet">
+</head>
+
+<body>
+    <h1> Projeto Orientado </h1>
+
+    <p id="barra"> 
+        <a href="home.html"> Home </a>|<a href="quemsomos.html" > Quem somos 
+        </a>| <a href="curiosidades.html">Curiosidades</a> | Contato
+    </p>
+
+    
+    <form action="http://hub.fatecrl.edu.br/sobrino/recebe-v2.php" method="post">
+
+        <h2>Formulário de Contato</h2>
+        
+        <div>
+        <label for="membros">Escolha sua vítima:</label>
+        <select name="membros" id="membros" form="membroform">
+            <option value="Crystal">Crystal Leonhardt</option>
+            <option value="Joao">João Pedro</option>
+            <option value="Maria">Maria Fernanda</option>
+            <option value="Matheus">Matheus Gabriel</option>
+            <option value="Michelle">Michelle Baraçal</option>
+            <option value="Gael">Gael Baraçal</option>
+        </select>
+        </div>
+        <div>
+            <label for="nome">Nome</label>
+            <p>Obrigatório</p>
+            <input type="text" name="Nome" id="nome" size="35" maxlength="30" autofocus required>
+        </div>
+        <div>
+            <label for="e-mail">E-mail</label><br>
+            <p>Obrigatório</p>
+            <input type="email" name="e-mail" id="e-mail" size="30" maxlength="30" required>
+        </div>
+        <div>
+            <label for="e-mail">Envie sua mensagem</label><br>
+            <p>Obrigatório</p>
+            <textarea name="mensagem" id="mensagem" placeholder="Escreva sua mensagem..." required></textarea>
+        </div>
+        <button> Enviar </button>
+      
+    </form>
+</body>
+</html>
