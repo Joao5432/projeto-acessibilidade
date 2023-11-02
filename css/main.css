@@ -143,12 +143,23 @@ figcaption{
 }
 
 /* Formulário */
-form{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+.input{
+    margin: 10px 0;
 }
-form label{
-    
+label{
+    display: block;    
+    float: left;
+    margin-right: 10px;
+}
+
+span {
+    color: red;
+}
+textarea{
+    margin: 10px 0;
+}
+
+label::before {
+    content:url(../imagens/asterisco.svg);
+    margin-left: 5px;
 }
