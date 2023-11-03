@@ -163,9 +163,7 @@ label::before {
     content:url(../imagens/asterisco.svg);
     margin-left: 5px;
 }
-span.aviso{
-    display: block;
-}
+
 /* validacao formulário */
 form .validacao{
     margin-top: 30px;
