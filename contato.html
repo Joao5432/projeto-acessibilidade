@@ -5,6 +5,7 @@
     <title> Projeto Orientado </title>
     <meta charset="UTF-8">
     <link href="css/main.css" rel="stylesheet">
+    <script src="js/main.js" defer></script>
 </head>
 
 <body>
@@ -15,10 +16,20 @@
         </a>| <a href="curiosidades.html">Curiosidades</a> | Contato
     </p>
 
-    <form action="http://hub.fatecrl.edu.br/sobrino/recebe-v2.php" method="post">
+    
+
+    <form id="formulario" method="post">
+        
+        <div class="validacao">
+            <p>Aviso de Dados inválidos</p>
+            <ul>
+                <li class="aviso">Insire o nome</li>
+            </ul>
+        </div>
 
         <h2>Formulário de Contato</h2>
         
+        <div class="select">
         <label for="membros">Integrante a ser contatado:</label>
         <select name="membros" id="membros" form="membroform">
             <option value="Crystal">Crystal Leonhardt</option>
@@ -28,6 +39,7 @@
             <option value="Michelle">Michelle Baraçal</option>
             <option value="Gael">Gael Baraçal</option>
         </select>
+        </div>
         </div>
         <div class="input">
             <label for="nome">Nome</label>
