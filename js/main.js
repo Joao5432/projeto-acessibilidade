@@ -1,13 +1,16 @@
 const formulario = document.getElementById("formulario");
 formulario.addEventListener("submit", validar);
 
-    
 
 function focoErro(i) {
-    var input = document.querySelectorAll("input");
-    input[i].style.border = "2px solid red";
+        var input = document.querySelectorAll("input");
+        input[i].style.border = "2px solid red";
 }
 
+function focoMensagem(){
+    var textArea = document.getElementById("mensagem");
+    textArea.style.border = "2px solid red";
+}
 
 function tiraErro(i) {
     var input = document.querySelectorAll("input");
@@ -36,21 +39,23 @@ function validar(formulario) {
     //validar nome
     var inputNome = document.getElementById("nome");
     var nomeErro = document.getElementById("nomeErro");
-    if (inputNome.value.length == 0) {
-        nomeErro.innerHTML = "<li>Insira o seu nome</li>";
-        validacao.style.display = "block";
-        nomeErro.style.display = "block";
-        li[0].style.display = "block";
-        focoErro(0);
-    }else if(inputNome.value.length < 5){
+    if (inputNome.value.length <= 5) {
+        console.log("nome");
         nomeErro.innerHTML = "<li>Insira o seu nome completo</li>";
         validacao.style.display = "block";
         nomeErro.style.display = "block";
         li[0].style.display = "block";
         focoErro(0);
     }else{
-        tiraErro(0)
+        tiraErro(0);
     }
+    // if(inputNome.value.length <= 5){
+    //     nomeErro.innerHTML = "<li>Insira o seu nome completo</li>";
+    //     validacao.style.display = "block";
+    //     nomeErro.style.display = "block";
+    //     li[0].style.display = "block";
+    //     focoErro(0);
+    // }
 
     //validar email
     var emailRegex = /\S+@\S+\.\S+/;
@@ -72,6 +77,19 @@ function validar(formulario) {
         tiraErro(1)
     }
 
+    //validar mensagem
+    var inputMensagem = document.getElementById("mensagem");
+    var mensagemErro = document.getElementById("mensagemErro");
+    if (inputMensagem.value.length == 0) {
+        mensagemErro.innerHTML = "<li>Insira a sua mensagem</li>";
+        validacao.style.display = "block";
+        mensagemErro.style.display = "block";
+        li[1].style.display = "block";
+        focoMensagem();
+    }else{
+        var textArea = document.getElementById("mensagem");
+        textArea.style.border = "";
+    }
 
 
 
