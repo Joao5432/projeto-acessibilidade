@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Validação de Formulário</title>
+</head>
+<body>
+    <div id="errorSummary" class="error"></div>
+    
+    <h2>Formulário de Exemplo</h2>
+    <form id="myForm">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name">
+        <span id="nameError" class="error"></span>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+        <span id="emailError" class="error"></span>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+    
+
+    <script>
+        document.getElementById("myForm").addEventListener("submit", function (event) {
+    // Evita o envio do formulário por padrão
+    event.preventDefault();
+
+    // Inicialize variável para coletar erros
+    let errors = [];
+
+    // Validação do campo "Nome"
+    let nameInput = document.getElementById("name");
+    let nameError = document.getElementById("nameError");
+    if (nameInput.value.trim() === "") {
+        errors.push("Nome é obrigatório.");
+        nameError.textContent = "Nome é obrigatório.";
+    } else {
+        nameError.textContent = "";
+    }
+
+    // Validação do campo "Email"
+    let emailInput = document.getElementById("email");
+    let emailError = document.getElementById("emailError");
+    if (!/^\S+@\S+\.\S+$/.test(emailInput.value)) {
+        errors.push("Email inválido.");
+        emailError.textContent = "Email inválido.";
+    } else {
+        emailError.textContent = "";
+    }
+
+    // Exibe todos os erros, se houver
+    let errorSummary = document.getElementById("errorSummary");
+    if (errors.length > 0) {
+        errorSummary.textContent = "Por favor, corrija os seguintes erros:";
+        errorSummary.style.color = "red";
+        errorSummary.style.fontWeight = "bold";
+        errorSummary.style.marginTop = "10px";
+        errorSummary.style.visibility = "visible";
+        errorSummary.style.display = "block";
+        errorSummary.style.fontStyle = "italic";
+        errorSummary.style.textDecoration = "underline";
+        errorSummary.style.textDecorationStyle = "wavy";
+        errorSummary.style.textDecorationColor = "blue";
+
+        let errorList = document.createElement("ul");
+        for (let error of errors) {
+            let errorItem = document.createElement("li");
+            errorItem.textContent = error;
+            errorList.appendChild(errorItem);
+        }
+        errorSummary.appendChild(errorList);
+    } else {
+        errorSummary.textContent = "";
+        errorSummary.style.display = "none";
+    }
+});
+
+    </script>
+</body>
+</html>
