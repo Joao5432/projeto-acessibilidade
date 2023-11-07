@@ -1,58 +1,66 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-<!-- 
-    Site Web Criado por Michelle Baraçal
--->    
-
 <head>
     <title> Projeto Orientado </title>
     <meta charset="UTF-8">
     <link href="css/main.css" rel="stylesheet">
+    <script src="js/main.js" defer></script>
 </head>
 
 <body>
-
+    <p id="topo"></p>
     <h1> Projeto Orientado </h1>
 
+    <a href="#principal">Pular para o conteúdo principal</a>
+
     <p id="barra"> 
-        Home |<a href="quemsomos.html" > Quem somos </a>|<a href="curiosidades.html"> Curiosidades </a> | <a href="contato.html"> Contato</a>
+        <a href="home.html"> Home </a>|<a href="quemsomos.html"> Quem somos 
+        </a>| <a href="curiosidades.html">Curiosidades</a> | Contato
     </p>
 
-    <h2> Alunos do Projeto </h2>
-    <p>Clique sobre a imagem para saber mais sobre  o aluno desejado:</p>
+    <form id="formulario" method="post">
+        
+        <div class="validacao">
+            <p>Aviso de Dados inválidos</p>
+            <ul id="ul">
+                <li id="nomeErro"></li>
+                <li id="emailErro"></li>
+                <li id="mensagemErro"></li>
+            </ul>
+        </div>
 
-    <main>
-        <figure>
-            <a href="quemsomos.html"><img src="Imagens/Michelle.jpg" alt="Foto de Michelle, uma mulher jovem adulta, está sorrindo e  está em um local com várias árvores verdes e um lago."></a>
-            <a href="quemsomos.html"><figcaption>Michelle Baraçal</figcaption></a>
-        </figure>
-    
-        <figure>
-            <a href="quemsomos.html"><img src="Imagens/Joao.jpg" alt="Foto de João, um homem jovem adulto, está sorrindo, está sentado em uma cadeira azul e em frente a uma mesa com computador."></a>
-            <a href="quemsomos.html"><figcaption>João Pedro</figcaption></a>
-        </figure>
-
-        <figure>
-            <a href="quemsomos.html"><img src="Imagens/Crystal.jpg" alt="Foto de Crystal, um homem jovem adulto, em frente a uma parede branca, acenando com a mão."></a>
-            <a href="quemsomos.html"><figcaption>Crystal Leonhardt</figcaption></a>
-        </figure>
-
-        <figure>
-            <a href="quemsomos.html"><img src="Imagens/Gael.jpg" alt="Foto de Gael, um cachorro de porte pequeno, das cores branca e marrom, da raça shih-tzu está deitado no chão, com um laço na sua cabeça do desenho Pokémon com o personagem Pikachu."></a>
-            <a href="quemsomos.html"><figcaption>Gael Baraçal</figcaption></a>
-        </figure>
-
-        <figure>
-            <a href="quemsomos.html"><img src="Imagens/Fernanda.jpg" alt="Foto de Maria Fernanda, uma mulher jovem adulta, de óculos e sorrindo, está em frente a uma parede branca."></a>
-            <a href="quemsomos.html"><figcaption>Maria Fernanda</figcaption></a>
-        </figure>
-
-        <figure>
-            <a href="quemsomos.html"><img src="Imagens/Matt.jpg" alt="Foto de Matheus, um homem jovem adulto, de óculos e sorrindo em frente a uma parede branca."></a>
-            <a href="quemsomos.html"><figcaption>Matheus Gabriel</figcaption></a>
-        </figure>
-    </main>
+        <h2 id="principal">Formulário de Contato</h2>
+        
+        <div class="select">
+        <label for="membros">Integrante a ser contatado:</label>
+        <select name="membros" id="membros" form="formulario">
+            <option value="Crystal">Crystal Leonhardt</option>
+            <option value="Joao">João Pedro</option>
+            <option value="Maria">Maria Fernanda</option>
+            <option value="Matheus">Matheus Gabriel</option>
+            <option value="Michelle">Michelle Baraçal</option>
+            <option value="Gael">Gael Baraçal</option>
+        </select>
+        </div>
+        <div class="input">
+            <label for="nome">Nome</label>
+            <span>(Obrigatório)</span><br> 
+            <input class="validar" type="text" name="nome" id="nome" size="35" maxlength="30" autofocus >
+        </div>
+        <div class="input">
+            <label for="e-mail">E-mail</label>
+            <span>(Obrigatório)</span><br>
+            <input class="validar" type="text" name="e-mail" id="e-mail" size="30" maxlength="30" >
+        </div>
+        <div class="input">
+            <label for="mensagem">Envie sua mensagem</label>
+            <span>(Obrigatório)</span><br>
+            <textarea class="validar" name="mensagem" id="mensagem" placeholder="Escreva sua mensagem..." ></textarea>
+        </div>
+        <input type="submit" name="Enviar" id="enviar">
+    </form>
+    <p></p>
+    <a href="#topo">Ir ao topo</a>
 </body>
-
 </html>
