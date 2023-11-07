@@ -44,7 +44,7 @@ fieldset{
     resize: none;
 }
 
-button{
+#enviar{
     padding: 10px;
     font-weight: bold;
     font-size: 1.2em;
@@ -110,10 +110,6 @@ a:visited {
 
 #barra a, #barra a:visited {
     color:#201B19;
-}
-
-figure a, figure a:visited {
-    color: #825935;
 }
 
 /*Imagens*/
