@@ -9,14 +9,15 @@
 </head>
 
 <body>
+    <p id="topo"></p>
     <h1> Projeto Orientado </h1>
 
+    <a href="#principal">Pular para o conteúdo principal</a>
+
     <p id="barra"> 
-        <a href="home.html"> Home </a>|<a href="quemsomos.html" > Quem somos 
+        <a href="home.html"> Home </a>|<a href="quemsomos.html"> Quem somos 
         </a>| <a href="curiosidades.html">Curiosidades</a> | Contato
     </p>
-
-    
 
     <form id="formulario" method="post">
         
@@ -29,11 +30,11 @@
             </ul>
         </div>
 
-        <h2>Formulário de Contato</h2>
+        <h2 id="principal">Formulário de Contato</h2>
         
         <div class="select">
         <label for="membros">Integrante a ser contatado:</label>
-        <select name="membros" id="membros" form="membroform">
+        <select name="membros" id="membros" form="formulario">
             <option value="Crystal">Crystal Leonhardt</option>
             <option value="Joao">João Pedro</option>
             <option value="Maria">Maria Fernanda</option>
@@ -42,27 +43,24 @@
             <option value="Gael">Gael Baraçal</option>
         </select>
         </div>
-        </div>
         <div class="input">
             <label for="nome">Nome</label>
-            <span>(Obrigatório)</span></label><br>
-            <input class="validar" type="text" name="Nome" id="nome" size="35" maxlength="30" autofocus >
+            <span>(Obrigatório)</span><br> 
+            <input class="validar" type="text" name="nome" id="nome" size="35" maxlength="30" autofocus >
         </div>
         <div class="input">
             <label for="e-mail">E-mail</label>
-            <span>(Obrigatório)</span></label><br>
+            <span>(Obrigatório)</span><br>
             <input class="validar" type="text" name="e-mail" id="e-mail" size="30" maxlength="30" >
         </div>
         <div class="input">
-            <label for="e-mail">Envie sua mensagem</label>
-            <span>(Obrigatório)</span></label><br>
+            <label for="mensagem">Envie sua mensagem</label>
+            <span>(Obrigatório)</span><br>
             <textarea class="validar" name="mensagem" id="mensagem" placeholder="Escreva sua mensagem..." ></textarea>
         </div>
-
-        <button>Enviar</button>
-
-        
-      
+        <input type="submit" name="Enviar" id="enviar">
     </form>
+    <p></p>
+    <a href="#topo">Ir ao topo</a>
 </body>
 </html>
